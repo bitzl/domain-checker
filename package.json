@@ -1,0 +1,19 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha"
+  },
+  "author": "Marcus Bitzl <marcus@bitzl.com> (https://bitzl.com)",
+  "license": "UNLICENSED",
+  "private": true,
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  },
+  "dependencies": {
+    "commander": "^2.9.0"
+  }
+}
