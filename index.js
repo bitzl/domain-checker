@@ -2,7 +2,7 @@
 
 const commander = require('commander');
 
-function main() {
+function commandline() {
   const packageInfo = require('./package.json');
   commander
     .version(packageInfo.version)
@@ -11,8 +11,25 @@ function main() {
   if (process.argv.length < 3) {
     commander.help();
   }
+}
 
-  // start processing...
+function processing(options) {
+  let words = fetchWords(options.tld);
+  while (words.length > 0) {
+    check(words, options.tld, function (error, checked) {
+      if (error != null) {
+        console.log(error);
+        return;
+      }
+      save(checked);
+    });
+    words = fetchWords(options.tld, options.min, options.max);
+  }
+}
+
+function main() {
+  const opts = commandline();
+  processing(opts);
 }
 
 if (require.main === module) {

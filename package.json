@@ -1,7 +1,7 @@
 {
-  "name": "",
+  "name": "domain-checker",
   "version": "1.0.0",
-  "description": "",
+  "description": "Check domains from Elasticsearch.",
   "main": "index.js",
   "scripts": {
     "test": "node_modules/mocha/bin/mocha"
@@ -14,6 +14,7 @@
     "mocha": "^2.4.5"
   },
   "dependencies": {
+    "async": "^1.5.2",
     "commander": "^2.9.0"
   }
 }

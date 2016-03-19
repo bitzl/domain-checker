@@ -1,3 +1,5 @@
-# Starter Project for Node.js
+# Check Domains
 
-For any new project, change at least metadata in `package.json`.
+Usage:
+
+    node index.js
